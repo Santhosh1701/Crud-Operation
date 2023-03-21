@@ -35,5 +35,6 @@ export const getData = async (req, res) => {
 
 export const deleteData = async (req, res) => {
     await data.findByIdAndDelete(req.params.id);
-    console.log("Deleted Successfully");
-}
+    res.status(200).json("Student deleted Successfully");
+  };
+  
